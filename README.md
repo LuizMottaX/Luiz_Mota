@@ -46,7 +46,7 @@ Descrição do cenário onde o sistema deverá funcionar:
  16 ->  O resultado da entrevista deve ir para um formulário.                                      
  17 ->  O veterinário deverá examinar o animal e anotar em prontuário (ficha) suas observações.    
  18 ->  Dependendo da situação do animal, este receberá uma receita.   
- 19 ->  O dono do animal deve informar se o mesmo possui alergia a alguma medicação.
+ 19 ->  O dono do animal deve informar se o mesmo possui alergia a alguma medicação.  
  20 ->  Registrar o diagnóstico e criar um plano de tratamento, incluindo prescrições e recomendações.                           
  21 ->  Registrar os medicamentos prescritos e o plano de administração.                                      
  22 ->  Programar e registrar consultas de acompanhamento para monitorar a evolução do tratamento.    
