@@ -58,6 +58,62 @@ Descrição do cenário onde o sistema deverá funcionar:
 
 # 4. Diagrama ER
 
+```mermaid
+erDiagram
+    CLIENTS {
+        string id PK "ID do Cliente"
+        string name "Nome do Cliente"
+        string contact "Contato do Cliente"
+    }
+    ANIMALS {
+        string id PK "ID do Animal"
+        string name "Nome do Animal"
+        string type "Tipo (Gato/Cachorro)"
+        string condition "Condição ao Chegar"
+        string foodType "Tipo de Ração"
+        string habits "Hábitos"
+    }
+    VETERINARIANS {
+        string id PK "ID do Veterinário"
+        string name "Nome do Veterinário"
+        string specialty "Especialidade"
+    }
+    APPOINTMENTS {
+        string id PK "ID do Atendimento"
+        date date "Data do Atendimento"
+        string time "Hora do Atendimento"
+        string status "Status (Agendado/Realizado)"
+    }
+    RECORDS {
+        string id PK "ID do Prontuário"
+        string animalId FK "ID do Animal"
+        string vetId FK "ID do Veterinário"
+        string observations "Observações"
+        string diagnosis "Diagnóstico"
+        string treatmentPlan "Plano de Tratamento"
+        string prescription "Prescrições"
+        string followUp "Consultas de Acompanhamento"
+    }
+    BILLS {
+        string id PK "ID da Fatura"
+        string appointmentId FK "ID do Atendimento"
+        float amount "Valor"
+        string status "Status do Pagamento"
+    }
+    ATTENDANTS {
+        string id PK "ID do Atendente"
+        string name "Nome do Atendente"
+    }
+    
+    CLIENTS ||--o{ ANIMALS : owns
+    ANIMALS ||--o{ APPOINTMENTS : "receives"
+    VETERINARIANS ||--o{ APPOINTMENTS : "conducts"
+    APPOINTMENTS ||--o{ RECORDS : "generates"
+    RECORDS ||--o{ BILLS : "bills"
+    ATTENDANTS ||--o{ APPOINTMENTS : "manages"
+```
+
+
 # 5. Diagrama de classe
 
 # 6. Casos de uso
