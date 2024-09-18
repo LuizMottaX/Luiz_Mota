@@ -47,11 +47,11 @@ Descrição do cenário onde o sistema deverá funcionar:
  17 ->  O veterinário deverá examinar o animal e anotar em prontuário (ficha) suas observações.    
  18 ->  Dependendo da situação do animal, este receberá uma receita.   
  19 ->  O dono do animal deve informar se o mesmo possui alergia a alguma medicação.
- 20 ->  Registrar o diagnóstico e criar um plano de tratamento, incluindo prescrições e recomendações.
- 21 ->  Registrar os medicamentos prescritos e o plano de administração.
- 22 ->  Programar e registrar consultas de acompanhamento para monitorar a evolução do tratamento.
- 23 ->  Criar faturas detalhadas para os serviços prestados, incluindo consultas, exames e tratamentos.
- 24 ->  Registrar pagamentos e atualizar o status financeiro no sistema. 
+ 20 ->  Registrar o diagnóstico e criar um plano de tratamento, incluindo prescrições e recomendações.                           
+ 21 ->  Registrar os medicamentos prescritos e o plano de administração.                                      
+ 22 ->  Programar e registrar consultas de acompanhamento para monitorar a evolução do tratamento.    
+ 23 ->  Criar faturas detalhadas para os serviços prestados, incluindo consultas, exames e tratamentos.   
+ 24 ->  Registrar pagamentos e atualizar o status financeiro no sistema.
 
 
 # 3. Visão geral do sistema
