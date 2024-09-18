@@ -316,7 +316,7 @@ CREATE TABLE ConsultasAcompanhamento (
 );
 ```
 
-  # 16.2 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
+  # 16.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.
 
   ```SQL
 -- Inserir dados na tabela Clientes
