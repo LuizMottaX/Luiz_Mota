@@ -116,6 +116,87 @@ erDiagram
 
 # 5. Diagrama de classe
 
+```mermaid
+classDiagram
+    %% Definições de classe
+
+    class Cliente {
+        +int id
+        +string nome
+        +string contato
+    }
+
+    class Animal {
+        +int id
+        +string nome
+        +string tipo
+        +string condicaoChegada
+        +string tipoRacao
+        +string habitos
+    }
+
+    class Veterinario {
+        +int id
+        +string nome
+        +string especialidade
+    }
+
+    class Atendimento {
+        +int id
+        +date data
+        +time hora
+        +string status
+    }
+
+    class Registro {
+        +int id
+        +string observacoes
+        +string diagnostico
+        +string planoTratamento
+        +string prescricoes
+        +string acompanhamento
+    }
+
+    class Fatura {
+        +int id
+        +decimal valor
+        +string status
+    }
+
+    class Atendente {
+        +int id
+        +string nome
+    }
+
+    class Medicamento {
+        +int id
+        +string nome
+        +string descricao
+    }
+
+    class Prescricao {
+        +int id
+        +string dosagem
+    }
+
+    class ConsultaAcompanhamento {
+        +int id
+        +date data
+    }
+
+    %% Relacionamentos
+
+    Cliente "1" -- "0..*" Animal : possui
+    Animal "1" -- "0..*" Atendimento : recebe
+    Veterinario "1" -- "0..*" Atendimento : realiza
+    Atendimento "1" -- "0..1" Registro : gera
+    Registro "1" -- "0..*" Fatura : gera
+    Atendente "1" -- "0..*" Atendimento : gerencia
+    Registro "1" -- "0..*" Prescricao : inclui
+    Medicamento "1" -- "0..*" Prescricao : prescrito
+    Registro "1" -- "0..*" ConsultaAcompanhamento : inclui
+```
+
 # 6. Casos de uso
 
 ## 6.1 Histórias de Usuário
