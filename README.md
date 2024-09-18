@@ -218,3 +218,100 @@ classDiagram
 # 14. manutenção e instalação
 
 # 15. Glossário
+
+# 16. Script SQL
+
+  #16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
+
+  ```SQL
+  -- Tabela de Clientes
+CREATE TABLE Clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    contato VARCHAR(255) NOT NULL
+);
+
+-- Tabela de Animais
+CREATE TABLE Animais (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    tipo ENUM('Gato', 'Cachorro') NOT NULL,
+    condicao_chegada TEXT,
+    tipo_racao VARCHAR(255),
+    habitos TEXT,
+    cliente_id INT,
+    FOREIGN KEY (cliente_id) REFERENCES Clientes(id)
+);
+
+-- Tabela de Veterinários
+CREATE TABLE Veterinarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    especialidade VARCHAR(255)
+);
+
+-- Tabela de Atendimentos
+CREATE TABLE Atendimentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    data DATE NOT NULL,
+    hora TIME NOT NULL,
+    status ENUM('Agendado', 'Realizado') NOT NULL,
+    animal_id INT,
+    atendente_id INT,
+    FOREIGN KEY (animal_id) REFERENCES Animais(id)
+);
+
+-- Tabela de Registros (Prontuário)
+CREATE TABLE Registros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    animal_id INT,
+    veterinario_id INT,
+    observacoes TEXT,
+    diagnostico TEXT,
+    plano_tratamento TEXT,
+    prescricoes TEXT,
+    acompanhamento TEXT,
+    FOREIGN KEY (animal_id) REFERENCES Animais(id),
+    FOREIGN KEY (veterinario_id) REFERENCES Veterinarios(id)
+);
+
+-- Tabela de Faturas
+CREATE TABLE Faturas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    atendimento_id INT,
+    valor DECIMAL(10, 2) NOT NULL,
+    status ENUM('Pendente', 'Pago') NOT NULL,
+    FOREIGN KEY (atendimento_id) REFERENCES Atendimentos(id)
+);
+
+-- Tabela de Atendentes
+CREATE TABLE Atendentes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+-- Tabela de Medicamentos
+CREATE TABLE Medicamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT
+);
+
+-- Tabela de Prescrições
+CREATE TABLE Prescricoes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    registro_id INT,
+    medicamento_id INT,
+    dosagem VARCHAR(255),
+    FOREIGN KEY (registro_id) REFERENCES Registros(id),
+    FOREIGN KEY (medicamento_id) REFERENCES Medicamentos(id)
+);
+
+-- Tabela de Consultas de Acompanhamento
+CREATE TABLE ConsultasAcompanhamento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    registro_id INT,
+    data DATE NOT NULL,
+    FOREIGN KEY (registro_id) REFERENCES Registros(id)
+);
+```
