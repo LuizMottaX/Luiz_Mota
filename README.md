@@ -221,7 +221,7 @@ classDiagram
 
 # 16. Script SQL
 
-  #16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
+  # 16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
 
   ```SQL
   -- Tabela de Clientes
@@ -314,4 +314,51 @@ CREATE TABLE ConsultasAcompanhamento (
     data DATE NOT NULL,
     FOREIGN KEY (registro_id) REFERENCES Registros(id)
 );
+```
+
+  # 16.2 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
+
+  ```SQL
+-- Inserir dados na tabela Clientes
+INSERT INTO Clientes (nome, contato) VALUES
+('Maria Silva', 'maria.silva@example.com'),
+('João Santos', 'joao.santos@example.com'),
+('Ana Oliveira', 'ana.oliveira@example.com');
+
+-- Inserir dados na tabela Animais
+INSERT INTO Animais (nome, tipo, condicao_chegada, tipo_racao, habitos, cliente_id) VALUES
+('Felix', 'Gato', 'Fraco, desidratado', 'Ração seca', 'Dormir muito', 1),
+('Rex', 'Cachorro', 'Lesão na pata', 'Ração úmida', 'Brincar com bolas', 2),
+('Luna', 'Gato', 'Saudável', 'Ração seca', 'Caçar brinquedos', 3);
+
+-- Inserir dados na tabela Veterinarios
+INSERT INTO Veterinarios (nome, especialidade) VALUES
+('Dr. Carlos Almeida', 'Dermatologia'),
+('Dra. Fernanda Costa', 'Cardiologia'),
+('Dr. Paulo Mendes', 'Ortopedia');
+
+-- Inserir dados na tabela Atendimentos
+INSERT INTO Atendimentos (data, hora, status, animal_id, atendente_id) VALUES
+('2024-09-20', '09:00:00', 'Agendado', 1, 1),
+('2024-09-20', '10:00:00', 'Agendado', 2, 2),
+('2024-09-21', '11:00:00', 'Realizado', 3, 3);
+
+-- Inserir dados na tabela Registros
+INSERT INTO Registros (animal_id, veterinario_id, observacoes, diagnostico, plano_tratamento, prescricoes, acompanhamento) VALUES
+(1, 1, 'Pelagem opaca, sinais de desidratação.', 'Desidratação', 'Hidratação intravenosa, dieta equilibrada.', 'Solução salina', 'Reavaliação em 1 semana.'),
+(2, 3, 'Lesão visível na pata direita.', 'Fratura na pata', 'Imobilização com gesso, analgésicos.', 'Analgesia e anti-inflamatório', 'Revisão em 10 dias.'),
+(3, 2, 'Animais saudáveis, sem sinais de doença.', 'Saudável', 'Manutenção dos cuidados gerais.', NULL, 'Reavaliação anual.');
+
+-- Inserir dados na tabela Faturas
+INSERT INTO Faturas (atendimento_id, valor, status) VALUES
+(1, 150.00, 'Pendente'),
+(2, 200.00, 'Pago'),
+(3, 100.00, 'Pendente');
+
+-- Inserir dados na tabela Atendentes
+INSERT INTO Atendentes (nome) VALUES
+('Joana Pereira'),
+('Ricardo Lima'),
+('Patrícia Souza');
+
 ```
