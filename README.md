@@ -199,6 +199,8 @@ classDiagram
 
 # 6. Casos de uso
 
+   ![Diagrama de casos de uso](https://github.com/LuizMottaX/Luiz_Mota/blob/main/Untitled%20Diagram.drawio) 
+
 ## 6.1 Histórias de Usuário
 
 # 7. Diagrama de componente  
@@ -362,3 +364,5 @@ INSERT INTO Atendentes (nome) VALUES
 ('Patrícia Souza');
 
 ```
+
+
