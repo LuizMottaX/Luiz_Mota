@@ -199,7 +199,7 @@ classDiagram
 
 # 6. Casos de uso
 
-   ![Diagrama de casos de uso](https://github.com/LuizMottaX/Luiz_Mota/blob/main/Untitled%20Diagram.drawio) 
+   ![Diagrama de casos de uso]() 
 
 ## 6.1 Histórias de Usuário
 
