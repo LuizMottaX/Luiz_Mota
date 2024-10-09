@@ -204,7 +204,7 @@ classDiagram
 ## 6.1 Histórias de Usuário
 
  ```
- 
+
     1 - Cadastro de Cliente e Animal
         Como um cliente, quero me cadastrar e registrar meus animais (gato ou cachorro) no sistema, para que eu possa agendar consultas e receber atendimento adequado.
 
@@ -243,6 +243,22 @@ classDiagram
 
 # 9. Protótipo de telas
 
+## 9.1. Tela de Login
+
+![Tela de login SC](https://github.com/LuizMottaX/Luiz_Mota/blob/main/tela_login.png?raw=true)
+
+## 9.2. Tela de Cadastro
+
+![Tela de cadastro](https://github.com/LuizMottaX/Luiz_Mota/blob/main/cadastros.png?raw=true)
+
+## 9.3. Tela de Grafico
+
+![Tela de Grafico](https://github.com/LuizMottaX/Luiz_Mota/blob/main/graficos.png?raw=true)
+
+## 9.4. Tela de Dashboard
+
+![Tela de Dashboard](https://github.com/LuizMottaX/Luiz_Mota/blob/main/dashboard.png)
+
 # 10 Diagrama de navegação de telas
 
 # 11. Pilha tecnológica
@@ -257,7 +273,7 @@ classDiagram
 
 # 16. Script SQL
 
-  # 16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
+  ## 16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
 
   ```SQL
   -- Tabela de Clientes
@@ -352,7 +368,7 @@ CREATE TABLE ConsultasAcompanhamento (
 );
 ```
 
-  # 16.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.
+  ## 16.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.
 
   ```SQL
 -- Inserir dados na tabela Clientes
