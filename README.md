@@ -203,6 +203,40 @@ classDiagram
 
 ## 6.1 Histórias de Usuário
 
+ ```
+ 
+    1 - Cadastro de Cliente e Animal
+        Como um cliente, quero me cadastrar e registrar meus animais (gato ou cachorro) no sistema, para que eu possa agendar consultas e receber atendimento adequado.
+
+    2 - Informação sobre a Condição do Animal
+        Como cliente, quero informar a condição em que meu animal chega à clínica, para que o veterinário tenha uma visão clara do estado de saúde inicial dele.
+
+    2- Registro de Alimentação e Hábitos
+        Como cliente, quero informar o tipo de ração que meu animal consome e seus hábitos (alimentação, comportamento), para que o veterinário possa ajustar recomendações conforme as necessidades do animal.
+
+    3 - Marcar Consulta
+        Como cliente, quero poder marcar horários de atendimento para meu animal, para garantir que ele seja atendido no momento mais conveniente e adequado.
+
+    4 - Recebimento de Receita
+        Como dono de animal, quero receber uma receita com as medicações e tratamentos recomendados após a consulta, para seguir o plano de tratamento do veterinário.
+
+    5 - Fila de Espera e Acompanhamento
+        Como atendente, quero verificar se há disponibilidade na agenda e, se não houver, colocar o cliente e seu animal na fila de espera para otimizar o fluxo de atendimentos.
+
+    6 - Entrevista Inicial pelo Veterinário
+        Como veterinário, quero realizar uma entrevista com o dono do animal antes do exame físico, para coletar informações essenciais sobre a saúde e os hábitos do animal.
+
+    7 - Prontuário Completo
+        Como veterinário, quero criar um prontuário completo para cada animal atendido, registrando todas as observações, diagnósticos e prescrições, para manter um histórico detalhado da saúde do animal.
+
+    8 - Registro de Alergias e Medicações
+        Como cliente, quero informar se meu animal tem alguma alergia a medicações, para que o veterinário possa evitar prescrever remédios que possam causar reações adversas.
+
+    9 - Pagamento e Fatura
+        Como cliente, quero receber uma fatura detalhada dos serviços prestados (consultas, exames e tratamentos) e efetuar o pagamento na clínica, garantindo que o status financeiro seja atualizado no sistema.
+
+```
+
 # 7. Diagrama de componente  
 
 # 8. Diagrama de implantação
