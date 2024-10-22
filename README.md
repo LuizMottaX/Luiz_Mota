@@ -239,6 +239,8 @@ classDiagram
 
 # 7. Diagrama de componente  
 
+![Diagrama de Compenente](https://github.com/LuizMottaX/Luiz_Mota/blob/main/diagrama_compenente.png?raw=true) 
+
 # 8. Diagrama de implantação
 
 # 9. Protótipo de telas
