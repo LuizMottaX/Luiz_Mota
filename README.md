@@ -243,6 +243,8 @@ classDiagram
 
 # 8. Diagrama de implantação
 
+
+
 # 9. Protótipo de telas
 
 ## 9.1. Tela de Login
