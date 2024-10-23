@@ -265,6 +265,8 @@ classDiagram
 
 # 10 Diagrama de navegação de telas
 
+![Diagrama de navegacao de tela](https://github.com/LuizMottaX/Luiz_Mota/blob/main/diagrama_navegacao_telas.png?raw=true)
+
 # 11. Pilha tecnológica
 
 # 12. Requisitos do sistema
