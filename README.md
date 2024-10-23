@@ -18,7 +18,9 @@
 - [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
 - [14. manutenção e instalação](#14-manutenção-e-instalação)
 - [15. Glossário](#15-glossario)
-
+- [16. SQL](#16-sql)
+    - [16.1 script SQL para MYSQL para gerar as tabelas para as regras de negócio](#161-histórias-de-usuário)
+    - [16.1 SQL comandos INSERT com dados fictícios para as tabelas](#161-histórias-de-usuário)
 
 # 1. Introdução
 O projeto a seguir apresenta um sistema desenvolvido para um pet shop. A empresa é considerada  micro e iniciou as atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadram, desta forma, os proprietários decidiram desenvolver uma solução própria. Esta solução é detalhada.
