@@ -271,6 +271,48 @@ classDiagram
 
 # 11. Pilha tecnológica
 
+```mermaid
+graph TD
+
+%% Camada de Apresentação
+A[Camada de Apresentação]
+A1[Interface de Usuário] --> A2[Portal Web e Mobile para Clientes]
+A2 --> A3[Portal de Atendentes]
+A3 --> A4[Portal de Veterinários]
+
+%% Camada de Aplicação
+B[Camada de Aplicação]
+B1[Serviço de Cadastro de Clientes e Animais] --> A2
+B2[Serviço de Agendamento] --> A3
+B3[Serviço de Atendimento Veterinário] --> A4
+B4[Serviço de Prontuário Médico] --> A4
+B5[Serviço de Faturamento e Pagamentos] --> A2
+
+%% Camada de Negócio
+C[Camada de Negócio]
+C1[(Cadastro de Cliente e Animal)] --> B1
+C2[(Agendamento e Agenda)] --> B2
+C3[(Atendimento Veterinário)] --> B3
+C4[(Prontuário e Diagnóstico)] --> B4
+C5[(Receita e Prescrição)] --> B4
+C6[(Plano de Tratamento e Acompanhamento)] --> B4
+C7[(Faturamento e Financeiro)] --> B5
+
+%% Camada de Dados
+D[Camada de Dados]
+D1[Banco de Dados de Clientes e Animais] --> C1
+D2[Banco de Dados de Agenda e Atendimento] --> C2
+D3[Banco de Dados de Prontuários] --> C4
+D4[Banco de Dados de Receitas e Tratamentos] --> C5
+D5[Banco de Dados Financeiro] --> C7
+
+%% Conexões Entre as Camadas
+A --> B
+B --> C
+C --> D
+
+```
+
 # 12. Requisitos do sistema
 
 # 13. Considerações sobre segurança
