@@ -315,6 +315,89 @@ C --> D
 
 # 12. Requisitos do sistema
 
+```
+1. Servidores
+Servidor de Aplicação
+
+Configuração do Servidor de Aplicação:
+CPU: Mínimo de 4 núcleos (preferível 8 para suportar escalabilidade).
+Memória RAM: Mínimo de 16 GB.
+Armazenamento: SSD de 500 GB, com opções de expansão conforme crescimento de dados.
+Sistema Operacional: Linux (Ubuntu Server ou CentOS) ou Windows Server, dependendo da compatibilidade com a stack de desenvolvimento.
+Software de Servidor de Aplicação:
+Para aplicações em PHP: Apache ou Nginx.
+Para Node.js: Servidor integrado ou configuração com Nginx como proxy reverso.
+Alternativas para frameworks como Spring Boot (Java) ou Django (Python) também podem ser consideradas.
+Servidor de Banco de Dados
+
+Configuração do Servidor de Banco de Dados:
+CPU: Mínimo de 4 núcleos, preferível 8 para operações intensivas.
+Memória RAM: 32 GB para otimização de consultas e cache.
+Armazenamento: SSD de 1 TB, com opções de expansão para backup e histórico de dados.
+Sistema Operacional: Linux (Ubuntu Server ou CentOS).
+Software de Banco de Dados: MySQL, PostgreSQL ou MongoDB, dependendo da escolha do banco de dados.
+Replicação e Backup: Configurar replicação e backups automáticos diários para garantir disponibilidade e recuperação de dados.
+Servidor de Backup e Recuperação de Desastres
+
+Configuração do Servidor de Backup:
+CPU: 2 núcleos.
+Memória RAM: 8 GB.
+Armazenamento: Mínimo de 2 TB em discos SATA ou SSD, dependendo do volume de dados e frequência de backup.
+Sistema Operacional: Linux.
+Software de Backup: Ferramentas como Bacula, Rsync, ou soluções de backup em nuvem, como AWS Backup, para gerenciamento e automação de backups.
+
+2. Máquinas para Usuários (Atendentes e Veterinários)
+Desktops para Atendentes:
+CPU: Dual-core.
+Memória RAM: 8 GB.
+Armazenamento: SSD de 256 GB.
+Sistema Operacional: Windows 10, Windows 11 ou Ubuntu Linux.
+Navegador: Chrome, Firefox ou navegador compatível com o sistema.
+Periféricos: Monitor de 21 polegadas, teclado e mouse.
+Tablets para Veterinários (opcional):
+Modelo sugerido: iPad com iPadOS ou tablets Android de qualidade similar.
+Especificações:
+Memória RAM: Mínimo de 4 GB.
+Armazenamento: 64 GB ou superior.
+Tela: 10 polegadas ou superior, para visualização de prontuários e registros.
+
+3. Dispositivos de Rede e Segurança
+Roteador Corporativo de Alta Capacidade:
+Velocidade: Suporte para no mínimo 1 Gbps.
+Capacidade: Múltiplas redes VLAN para segmentar o tráfego entre rede administrativa e rede pública para clientes.
+Segurança: Controle de acesso (ACL), firewalls integrados, VPN para acesso seguro externo.
+Switch Gerenciável (para conexões locais):
+Portas: 24 portas (expansível), Gigabit Ethernet.
+Gerenciamento: Switch gerenciável para configurar VLANs e segmentação de rede.
+Marca sugerida: Cisco, HP ou Ubiquiti.
+Firewall Dedicado:
+Capacidade: Suporte para filtragem de tráfego de entrada e saída, prevenção contra intrusões (IPS) e detecção de ameaças.
+Configuração: ACLs para restringir acesso e VPN para funcionários que necessitem acessar remotamente.
+Marca sugerida: Fortinet, pfSense, SonicWall ou similar.
+Access Points para Conexão Wi-Fi:
+Cobertura: Implementar múltiplos pontos de acesso para cobrir áreas de atendimento e recepção.
+Capacidade de Conexão Simultânea: Até 50 dispositivos.
+Segurança Wi-Fi: WPA3 para maior segurança nas conexões.
+Servidor de VPN (para acesso remoto seguro):
+Configuração: Servidor de VPN integrado ou separado, com suporte a protocolos de segurança como OpenVPN ou IPSec.
+Função: Permitir que veterinários e gestores acessem o sistema de forma segura fora das dependências da clínica.
+
+4. Software e Licenciamento
+Sistema Operacional Servidores:
+Licenças necessárias: Windows Server, Ubuntu Server ou CentOS.
+Firewall e VPN: Configuração de iptables (Linux) ou firewall dedicado com licenciamento (pfSense, Fortinet).
+Ferramentas de Desenvolvimento e Deployment:
+IDE: Visual Studio Code, IntelliJ, ou IDE preferida.
+Sistema de Versionamento: Git (GitHub, GitLab ou Bitbucket para colaboração).
+Pipeline de CI/CD: Jenkins, GitLab CI ou equivalente, para automação de build e deploy.
+Software de Backup e Monitoramento:
+Backup: Licença para AWS Backup, Bacula ou Rsync para backups locais.
+Monitoramento: Zabbix, Grafana, ou Nagios para monitoramento da saúde do sistema.
+Banco de Dados:
+Licença de Banco de Dados: MySQL Community (gratuito) ou PostgreSQL, com planos de considerar versões empresariais caso o uso escale.
+
+```
+
 # 13. Considerações sobre segurança
 
 # 14. manutenção e instalação
