@@ -400,6 +400,73 @@ Licença de Banco de Dados: MySQL Community (gratuito) ou PostgreSQL, com planos
 
 # 13. Considerações sobre segurança
 
+ - Autenticação e Controle de Acesso
+Parâmetros de Senha Seguros:
+Comprimento mínimo de senha: No mínimo 12 caracteres.
+Complexidade: Exigir ao menos uma letra maiúscula, uma minúscula, um número e um caractere especial.
+Expiração de senha: Forçar redefinição de senha a cada 90 dias para usuários administrativos (como atendentes e veterinários).
+Bloqueio de conta: Bloquear a conta após 5 tentativas de login falhas para prevenir ataques de força bruta.
+Autenticação Multifator (MFA): Implementar MFA para todos os usuários administrativos, exigindo uma segunda forma de verificação (como um código enviado por SMS ou um app autenticador).
+Controle de Acesso Baseado em Funções (RBAC):
+Mínimo de Privilégios: Garantir que cada usuário tenha acesso apenas aos dados e funções necessárias ao seu papel (clientes, atendentes e veterinários).
+Segregação de Funções: Dividir o acesso e os privilégios para prevenir que um único usuário possa realizar ações que comprometam a segurança do sistema.
+
+ - Proteção contra Ataques
+Proteção contra Ataques de Injeção SQL e XSS:
+Sanitização de Entrada: Limpar e validar todos os dados de entrada do usuário para prevenir injeções SQL e ataques XSS.
+Parâmetros Preparados: Usar parâmetros preparados em consultas SQL para evitar injeção de código malicioso.
+Bibliotecas de Segurança: Utilizar bibliotecas de segurança específicas para evitar XSS em frameworks JavaScript.
+Firewall e Sistema de Prevenção de Intrusões (IPS):
+Firewall de Aplicação Web (WAF): Instalar um WAF para monitorar e bloquear tráfego malicioso (como OWASP ModSecurity Core Rule Set).
+Sistema de Prevenção de Intrusões (IPS): Configurar um IPS para detectar e bloquear tentativas de acesso não autorizadas.
+Proteção contra Ataques de Força Bruta:
+Limitação de Taxa: Limitar o número de tentativas de login por usuário/IP em um determinado período.
+Recaptcha ou hCaptcha: Implementar um CAPTCHA no formulário de login para bloquear bots automatizados.
+
+ - Criptografia de Dados
+Criptografia de Dados em Trânsito:
+HTTPS com TLS: Exigir HTTPS em todas as conexões, utilizando TLS 1.2 ou superior para proteger os dados transmitidos entre cliente e servidor.
+Certificados SSL/TLS: Usar certificados de uma autoridade confiável e configurá-los com boas práticas de segurança (como Perfect Forward Secrecy).
+Criptografia de Dados em Repouso:
+Criptografia no Banco de Dados: Criptografar campos sensíveis (como dados pessoais e informações financeiras) no banco de dados utilizando AES-256.
+Armazenamento Seguro de Senhas: Usar algoritmos de hashing seguros como bcrypt ou Argon2 para armazenar senhas, com um número suficiente de iterações para resistir a ataques de força bruta.
+
+ - Monitoramento e Auditoria
+Monitoramento Contínuo de Segurança:
+Ferramenta de Monitoramento (SIEM): Implementar um sistema de monitoramento e correlação de eventos (SIEM) como Splunk, ELK Stack, ou Wazuh para monitorar logs de atividade e detectar comportamentos suspeitos.
+Alertas de Segurança: Configurar alertas para atividades incomuns, como acessos fora do horário padrão, tentativas de login falhas e acessos de locais desconhecidos.
+Auditoria e Log de Acesso:
+Logs de Auditoria: Registrar todas as atividades dos usuários administrativos e as ações relacionadas a dados sensíveis, incluindo login, logout, visualização de prontuários e edição de dados.
+Armazenamento Seguro de Logs: Proteger os logs de auditoria contra modificações e garantir que eles sejam armazenados em local seguro e com criptografia.
+Revisão Periódica de Logs: Realizar revisões regulares dos logs de auditoria para identificar e corrigir comportamentos suspeitos ou anômalos.
+
+ - Backup e Recuperação
+Política de Backup Seguro:
+Backup Regular: Realizar backups diários e semanais de todos os dados críticos (banco de dados, logs e configurações do sistema).
+Criptografia de Backups: Armazenar backups com criptografia AES-256 para proteger dados em caso de perda ou roubo de mídia.
+Armazenamento Offline: Manter uma cópia dos backups em um local offline para prevenção contra ransomware.
+Testes de Recuperação de Backup:
+Testes Regulares de Recuperação: Realizar testes de restauração de backups regularmente para garantir que o processo de recuperação funcione conforme o planejado.
+Plano de Recuperação de Desastres (DRP): Desenvolver e documentar um DRP para restaurar o sistema com o menor tempo de inatividade possível após uma falha.
+
+ - Segurança de Dispositivos e Conexões
+Dispositivos de Usuários (Computadores e Tablets):
+Antivírus e Antimalware: Instalar soluções de antivírus e antimalware em todos os dispositivos de atendentes e veterinários.
+Bloqueio de Tela Automático: Configurar um bloqueio automático para proteger dispositivos que permanecem inativos por alguns minutos.
+Acesso via VPN: Exigir o uso de uma VPN para todos os acessos ao sistema por dispositivos fora da rede da clínica.
+Segurança de Rede:
+Segmentação de Rede: Separar a rede administrativa da rede pública para evitar o acesso não autorizado aos sistemas críticos.
+Proteção contra Ataques DDoS: Usar uma solução de mitigação de DDoS, especialmente para sistemas públicos, para proteger contra ataques de negação de serviço.
+Autenticação de Wi-Fi Segura: Configurar redes Wi-Fi com WPA3 e restringir o acesso à rede administrativa.
+
+ - Boas Práticas de Gerenciamento de Vulnerabilidades
+Atualização e Patching Regular:
+Patches de Segurança: Manter todos os softwares atualizados com as versões mais recentes e corrigidas para eliminar vulnerabilidades.
+Verificações de Vulnerabilidades: Realizar varreduras de segurança periodicamente para identificar e corrigir vulnerabilidades de segurança em servidores e dispositivos de rede.
+Teste de Segurança Regular:
+Testes de Penetração (Pentest): Realizar testes de penetração anualmente ou após grandes atualizações para identificar possíveis vulnerabilidades exploráveis.
+Testes de Intrusão Internos: Simular ataques internos para avaliar a resistência do sistema a funcionários mal-intencionados ou compromissos internos.
+
 # 14. manutenção e instalação
 
 # 15. Glossário
