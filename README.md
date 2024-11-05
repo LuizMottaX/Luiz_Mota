@@ -400,6 +400,7 @@ Licença de Banco de Dados: MySQL Community (gratuito) ou PostgreSQL, com planos
 
 # 13. Considerações sobre segurança
 
+```
  - Autenticação e Controle de Acesso
 Parâmetros de Senha Seguros:
 Comprimento mínimo de senha: No mínimo 12 caracteres.
@@ -466,6 +467,7 @@ Verificações de Vulnerabilidades: Realizar varreduras de segurança periodicam
 Teste de Segurança Regular:
 Testes de Penetração (Pentest): Realizar testes de penetração anualmente ou após grandes atualizações para identificar possíveis vulnerabilidades exploráveis.
 Testes de Intrusão Internos: Simular ataques internos para avaliar a resistência do sistema a funcionários mal-intencionados ou compromissos internos.
+```
 
 # 14. manutenção e instalação
 
