@@ -471,6 +471,28 @@ Testes de Intrusão Internos: Simular ataques internos para avaliar a resistênc
 
 # 14. manutenção e instalação
 
+```
+ - Suporte Técnico e Atendimento a Incidentes
+Suporte Nível 1, 2 e 3: Oferecer um suporte escalável que inclui atendimento básico para resolução de problemas simples (Nível 1), resolução de problemas técnicos mais complexos (Nível 2) e suporte avançado para problemas críticos ou com impacto significativo (Nível 3).
+Atendimento Remoto e Presencial: Disponibilizar suporte remoto para resolução rápida de incidentes e atendimento presencial para problemas que exijam intervenção física.
+Tempo de Resposta Prioritário: Definir e garantir tempos de resposta para incidentes críticos (ex: 2 horas) e incidentes de baixa prioridade (ex: 24 horas).
+
+ - Treinamento e Suporte ao Usuário
+Treinamento para Funcionários: Oferecer treinamento periódico para a equipe do cliente sobre boas práticas de segurança, uso do sistema e novos recursos.
+Sessões de Capacitação para Novas Funcionalidades: Sempre que houver uma atualização ou modificação significativa, oferecer sessões para capacitar os usuários sobre as novas funcionalidades.
+Documentação de Suporte: Fornecer guias e documentos de ajuda personalizados para que os funcionários possam consultar em caso de dúvidas.
+
+ - Gestão e Análise de Logs
+Monitoramento e Análise de Logs de Segurança: Implementar um serviço de monitoramento e análise dos logs de segurança, incluindo registros de login e ações importantes, para identificar e resolver comportamentos suspeitos.
+Relatórios de Incidentes e Acessos: Fornecer relatórios periódicos ao cliente com informações sobre acessos, ações realizadas e tentativas de acesso não autorizado.
+Armazenamento Seguro de Logs: Configurar um armazenamento seguro e de longa duração para logs importantes, com opções de auditoria para consulta futura.
+
+ - Planos de Contingência e Recuperação de Desastres
+Plano de Recuperação de Desastres (DRP): Elaborar um plano de recuperação em caso de desastres que cubra perda de dados, falhas de sistema ou ataques cibernéticos.
+Simulações de Desastres: Realizar simulações anuais de recuperação de desastres para testar e aprimorar o DRP.
+Documentação do Processo de Recuperação: Fornecer uma documentação detalhada sobre os procedimentos de recuperação para que o cliente e sua equipe saibam como reagir em caso de falhas críticas.
+```
+
 # 15. Glossário
 
 # 16. Script SQL
