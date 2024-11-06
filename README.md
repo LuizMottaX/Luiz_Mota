@@ -1,9 +1,13 @@
 # REPOSITÓRIO - ENGENHARIA DE SOFTWARE
 
+# SUMARIO
 
-- [REPOSITORIO ENG. SE SW.](#repositorio-eng-se-sw)
+- [REPOSITÓRIO - ENGENHARIA DE SOFTWARE](#repositório---engenharia-de-software)
+- [SUMARIO](#sumario)
 - [1. Introdução](#1-introdução)
 - [2. Problema e descrição do negócio.](#2-problema-e-descrição-do-negócio)
+  - [2.1 Requisitos](#21-requisitos)
+    - [Requisitos Funcionais e Nao Funcionais](#requisitos-funcionais-e-nao-funcionais)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
 - [4. Diagrama ER](#4-diagrama-er)
 - [5. Diagrama de classe](#5-diagrama-de-classe)
@@ -11,16 +15,25 @@
   - [6.1 Histórias de Usuário](#61-histórias-de-usuário)
 - [7. Diagrama de componente](#7-diagrama-de-componente)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
-- [9. Protótipo de telas](#9-prototipo-de-telas)
+- [9. Diagramas C4](#9-diagramas-c4)
+  - [9.1. Diagrama de contexto](#91-diagrama-de-contexto)
+  - [9.2. Diagrama de container](#92-diagrama-de-container)
+  - [9.3. Diagrama de componente](#93-diagrama-de-componente)
+  - [9.4. Diagrama de código](#94-diagrama-de-código)
+- [9. Protótipo de telas](#9-protótipo-de-telas)
+  - [9.1. Tela de Login](#91-tela-de-login)
+  - [9.2. Tela de Cadastro](#92-tela-de-cadastro)
+  - [9.3. Tela de Grafico](#93-tela-de-grafico)
+  - [9.4. Tela de Dashboard](#94-tela-de-dashboard)
 - [10 Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
 - [11. Pilha tecnológica](#11-pilha-tecnológica)
 - [12. Requisitos do sistema](#12-requisitos-do-sistema)
 - [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
 - [14. manutenção e instalação](#14-manutenção-e-instalação)
-- [15. Glossário](#15-glossario)
-- [16. SQL](#16-sql)
-    - [16.1 script SQL para MYSQL para gerar as tabelas para as regras de negócio](#161-histórias-de-usuário)
-    - [16.1 SQL comandos INSERT com dados fictícios para as tabelas](#161-histórias-de-usuário)
+- [15. Glossário](#15-glossário)
+- [16. Script SQL](#16-script-sql)
+  - [16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.](#161-crie-um-scrit-sql-para-mysql-para-gerar-as-tabelas-para-as-regras-de-negócio)
+  - [16.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.](#162-gere-em-sql-comandos-insert-com-dados-fictícios-para-as-tabelas)
 
 # 1. Introdução
 O projeto a seguir apresenta um sistema desenvolvido para um pet shop. A empresa é considerada  micro e iniciou as atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadram, desta forma, os proprietários decidiram desenvolver uma solução própria. Esta solução é detalhada.
