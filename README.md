@@ -251,7 +251,7 @@ classDiagram
 # 9. Diagramas C4
 
 ## 9.1. Diagrama de contexto
-```
+```mermaid
 flowchart TD
     subgraph Clínica Veterinária
         Atendimento
@@ -277,7 +277,7 @@ flowchart TD
 
 ```
 ## 9.2. Diagrama de container
-```
+```mermaid
 flowchart TD
     Cliente -->|Acessa| SistemaWeb["Sistema Web de Cadastro e Agendamento"]
     Atendente -->|Acessa| SistemaWeb
@@ -300,7 +300,7 @@ flowchart TD
 
 ```
 ## 9.3. Diagrama de componente
-```
+```mermaid
 flowchart TD
     SistemaWeb --> CadastroCliente["Módulo de Cadastro de Cliente e Animal"]
     SistemaWeb --> Agendamento["Módulo de Agendamento"]
@@ -324,7 +324,7 @@ flowchart TD
 
 ```
 ## 9.4. Diagrama de código
-```
+```mermaid
 classDiagram
     class Cliente {
         +String nome
