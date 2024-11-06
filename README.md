@@ -56,6 +56,46 @@ Descrição do cenário onde o sistema deverá funcionar:
  24 ->  Registrar pagamentos e atualizar o status financeiro no sistema.
 
 
+ ## 2.1 Requisitos
+
+ ### Requisitos Funcionais e Nao Funcionais
+
+ | **ID** | **Requisito**                                                                                                         | **Tipo**            |
+|--------|------------------------------------------------------------------------------------------------------------------------|----------------------|
+| 1      | A clínica veterinária atende apenas os animais: gatos e cachorros.                                                     | Funcional           |
+| 2      | Os clientes devem fazer um cadastro de si e dos animais.                                                               | Funcional           |
+| 3      | Os clientes devem informar as condições nas quais os animais chegam.                                                   | Funcional           |
+| 4      | Os clientes devem informar o tipo de ração que o animal come.                                                          | Funcional           |
+| 5      | O cliente deve informar hábitos do animal.                                                                             | Funcional           |
+| 6      | Para cada animal é possível que mais de um veterinário o atenda.                                                       | Funcional           |
+| 7      | Os animais podem chegar e serem atendidos de acordo com uma agenda do dia.                                             | Funcional           |
+| 8      | Cada animal atendido receberá uma ficha e um prontuário.                                                               | Funcional           |
+| 9      | Outros donos podem querer marcar horários de atendimento futuro.                                                       | Funcional           |
+| 10     | O atendimento gera uma receita para o animal.                                                                          | Funcional           |
+| 11     | Quando um cliente chega na clínica veterinária, ele é atendido por um atendente.                                       | Funcional           |
+| 12     | O atendente deve verificar se existe agenda disponível com um veterinário.                                             | Funcional           |
+| 13     | O atendente deve colocar o cliente e seu animal na fila de espera, se necessário.                                      | Funcional           |
+| 14     | O atendente deve levar o cliente e o animal até o veterinário.                                                         | Funcional           |
+| 15     | O veterinário deve realizar uma entrevista com o dono do animal.                                                       | Funcional           |
+| 16     | O resultado da entrevista deve ser registrado em um formulário.                                                        | Funcional           |
+| 17     | O veterinário deverá examinar o animal e anotar no prontuário suas observações.                                        | Funcional           |
+| 18     | Dependendo da situação do animal, ele receberá uma receita.                                                            | Funcional           |
+| 19     | O dono do animal deve informar se ele possui alergia a alguma medicação.                                               | Funcional           |
+| 20     | Registrar o diagnóstico e criar um plano de tratamento, incluindo prescrições e recomendações.                         | Funcional           |
+| 21     | Registrar os medicamentos prescritos e o plano de administração.                                                       | Funcional           |
+| 22     | Programar e registrar consultas de acompanhamento para monitorar a evolução do tratamento.                             | Funcional           |
+| 23     | Criar faturas detalhadas para os serviços prestados, incluindo consultas, exames e tratamentos.                        | Funcional           |
+| 24     | Registrar pagamentos e atualizar o status financeiro no sistema.                                                       | Funcional           |
+| 25     | O sistema deve ter uma interface intuitiva e de fácil navegação.                                                       | Não Funcional       |
+| 26     | O sistema deve ser acessível via web para clientes e funcionários.                                                     | Não Funcional       |
+| 27     | O sistema deve armazenar informações de forma segura e confidencial, especialmente os dados médicos dos animais.       | Não Funcional       |
+| 28     | O sistema deve permitir recuperação de dados em caso de falhas.                                                        | Não Funcional       |
+| 29     | O sistema deve oferecer bom desempenho, respondendo rapidamente a consultas e operações básicas.                       | Não Funcional       |
+| 30     | O sistema deve ser escalável para atender a um número crescente de clientes e animais.                                 | Não Funcional       |
+| 31     | O sistema deve ser compatível com dispositivos móveis.                                                                 | Não Funcional       |
+| 32     | O sistema deve permitir a geração de relatórios para análises gerenciais.                                              | Não Funcional       |
+| 33     | O sistema deve ter backup automático diário para prevenção de perda de dados.                                          | Não Funcional       |
+
 # 3. Visão geral do sistema
 
 # 4. Diagrama ER
