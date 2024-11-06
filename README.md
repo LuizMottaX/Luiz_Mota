@@ -247,6 +247,147 @@ classDiagram
 
 ![Diagrama de Implatação](https://github.com/LuizMottaX/Luiz_Mota/blob/main/Diagrama_implatacao.png?raw=true)
 
+
+# 9. Diagramas C4
+
+## 9.1. Diagrama de contexto
+```
+flowchart TD
+    subgraph Clínica Veterinária
+        Atendimento
+        Cadastro
+        Agenda
+        Prontuário
+        Receita
+        Faturas
+    end
+
+    Cliente -->|Registra-se e cadastra animal| Cadastro
+    Cliente -->|Informa condição e hábitos do animal| Atendimento
+    Cliente -->|Agendamento de consultas| Agenda
+    Cliente -->|Recebe prontuário e receitas| Receita
+    Cliente -->|Realiza pagamento| Faturas
+
+    Atendente -->|Verifica agenda e cadastra atendimento| Agenda
+    Atendente -->|Leva cliente e animal até o veterinário| Atendimento
+
+    Veterinário -->|Entrevista dono e registra prontuário| Prontuário
+    Veterinário -->|Realiza exame e registra receita| Receita
+    Veterinário -->|Cria plano de tratamento e acompanhamento| Prontuário
+
+```
+## 9.2. Diagrama de container
+```
+flowchart TD
+    Cliente -->|Acessa| SistemaWeb["Sistema Web de Cadastro e Agendamento"]
+    Atendente -->|Acessa| SistemaWeb
+    Veterinário -->|Acessa| SistemaWeb
+
+    SistemaWeb -->|Integra| BancoDados["Banco de Dados"]
+    SistemaWeb -->|Integra| SistemaPagamento["Sistema de Pagamentos"]
+    SistemaWeb -->|Integra| Agenda["Módulo de Agendamento"]
+    SistemaWeb -->|Integra| Prontuario["Módulo de Prontuário"]
+    SistemaWeb -->|Integra| Receita["Módulo de Receita"]
+
+    subgraph Backend
+        SistemaWeb
+        BancoDados
+        SistemaPagamento
+        Agenda
+        Prontuario
+        Receita
+    end
+
+```
+## 9.3. Diagrama de componente
+```
+flowchart TD
+    SistemaWeb --> CadastroCliente["Módulo de Cadastro de Cliente e Animal"]
+    SistemaWeb --> Agendamento["Módulo de Agendamento"]
+    SistemaWeb --> Atendimento["Módulo de Atendimento"]
+    SistemaWeb --> Faturas["Módulo de Faturamento"]
+    
+    CadastroCliente --> BancoDados
+    Agendamento --> BancoDados
+    Atendimento --> BancoDados
+    Atendimento --> Prontuario["Módulo de Prontuário"]
+    Atendimento --> Receita["Módulo de Receita"]
+    Faturas --> SistemaPagamento
+    Faturas --> BancoDados
+
+    BancoDados --> RegistroAnimal["Registro de Animal"]
+    BancoDados --> RegistroCliente["Registro de Cliente"]
+    BancoDados --> RegistroProntuario["Registro de Prontuário"]
+    BancoDados --> RegistroAgenda["Registro de Agenda"]
+    BancoDados --> RegistroReceita["Registro de Receita"]
+    BancoDados --> RegistroFaturas["Registro de Faturas"]
+
+```
+## 9.4. Diagrama de código
+```
+classDiagram
+    class Cliente {
+        +String nome
+        +String telefone
+        +List<Animal> animais
+        +cadastrarAnimal()
+        +informarCondicao()
+        +informarHabitos()
+    }
+
+    class Animal {
+        +String nome
+        +String especie
+        +String racao
+        +String habitos
+        +Veterinario veterinario
+        +fichaProntuario
+    }
+
+    class Veterinario {
+        +String nome
+        +exame()
+        +entrevistaDono()
+        +criarProntuario()
+        +prescreverMedicacao()
+    }
+
+    class Atendente {
+        +String nome
+        +verificarAgenda()
+        +cadastrarCliente()
+        +acompanharCliente()
+    }
+
+    class FichaProntuario {
+        +String observacoes
+        +String diagnostico
+        +String planoTratamento
+        +criarFicha()
+    }
+
+    class Receita {
+        +String medicamentos
+        +String dosagem
+        +String administracao
+        +gerarReceita()
+    }
+
+    class Agenda {
+        +List<Horario> horariosDisponiveis
+        +marcarConsulta()
+        +consultarAgenda()
+    }
+
+    Cliente "1" --> "n" Animal
+    Animal "1" --> "n" Veterinario
+    Veterinario "1" --> "n" FichaProntuario
+    FichaProntuario "1" --> "1" Receita
+    Atendente "1" --> "1" Agenda
+    Agenda "1" --> "n" Horario
+
+```
+
 # 9. Protótipo de telas
 
 ## 9.1. Tela de Login
