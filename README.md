@@ -20,20 +20,21 @@
   - [9.2. Diagrama de container](#92-diagrama-de-container)
   - [9.3. Diagrama de componente](#93-diagrama-de-componente)
   - [9.4. Diagrama de código](#94-diagrama-de-código)
-- [9. Protótipo de telas](#9-protótipo-de-telas)
-  - [9.1. Tela de Login](#91-tela-de-login)
-  - [9.2. Tela de Cadastro](#92-tela-de-cadastro)
-  - [9.3. Tela de Grafico](#93-tela-de-grafico)
-  - [9.4. Tela de Dashboard](#94-tela-de-dashboard)
-- [10 Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
-- [11. Pilha tecnológica](#11-pilha-tecnológica)
-- [12. Requisitos do sistema](#12-requisitos-do-sistema)
-- [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
-- [14. manutenção e instalação](#14-manutenção-e-instalação)
-- [15. Glossário](#15-glossário)
-- [16. Script SQL](#16-script-sql)
-  - [16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.](#161-crie-um-scrit-sql-para-mysql-para-gerar-as-tabelas-para-as-regras-de-negócio)
-  - [16.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.](#162-gere-em-sql-comandos-insert-com-dados-fictícios-para-as-tabelas)
+- [10. Protótipo de telas](#10-protótipo-de-telas)
+  - [10.1. Tela de Login](#101-tela-de-login)
+  - [10.2. Tela de Cadastro](#102-tela-de-cadastro)
+  - [10.3. Tela de Grafico](#103-tela-de-grafico)
+  - [10.4. Tela de Dashboard](#104-tela-de-dashboard)
+- [11. Diagrama de navegação de telas](#11-diagrama-de-navegação-de-telas)
+- [12. Pilha tecnológica](#12-pilha-tecnológica)
+- [13. Requisitos do sistema](#13-requisitos-do-sistema)
+- [14. Considerações sobre segurança](#14-considerações-sobre-segurança)
+- [15. manutenção e instalação](#15-manutenção-e-instalação)
+- [16. Glossário](#16-glossário)
+- [17. Script SQL](#17-script-sql)
+  - [17.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.](#171-crie-um-scrit-sql-para-mysql-para-gerar-as-tabelas-para-as-regras-de-negócio)
+  - [17.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.](#172-gere-em-sql-comandos-insert-com-dados-fictícios-para-as-tabelas)
+
 
 # 1. Introdução
 O projeto a seguir apresenta um sistema desenvolvido para um pet shop. A empresa é considerada  micro e iniciou as atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadram, desta forma, os proprietários decidiram desenvolver uma solução própria. Esta solução é detalhada.
@@ -441,29 +442,29 @@ classDiagram
 
 ```
 
-# 9. Protótipo de telas
+# 10. Protótipo de telas
 
-## 9.1. Tela de Login
+## 10.1. Tela de Login
 
 ![Tela de login SC](https://github.com/LuizMottaX/Luiz_Mota/blob/main/tela_login.png?raw=true)
 
-## 9.2. Tela de Cadastro
+## 10.2. Tela de Cadastro
 
 ![Tela de cadastro](https://github.com/LuizMottaX/Luiz_Mota/blob/main/cadastros.png?raw=true)
 
-## 9.3. Tela de Grafico
+## 10.3. Tela de Grafico
 
 ![Tela de Grafico](https://github.com/LuizMottaX/Luiz_Mota/blob/main/graficos.png?raw=true)
 
-## 9.4. Tela de Dashboard
+## 10.4. Tela de Dashboard
 
 ![Tela de Dashboard](https://github.com/LuizMottaX/Luiz_Mota/blob/main/dashboard.png)
 
-# 10 Diagrama de navegação de telas
+# 11. Diagrama de navegação de telas
 
 ![Diagrama de navegacao de tela](https://github.com/LuizMottaX/Luiz_Mota/blob/main/diagrama_navegacao_telas.png?raw=true)
 
-# 11. Pilha tecnológica
+# 12. Pilha tecnológica
 
 ```mermaid
 graph TD
@@ -507,7 +508,7 @@ C --> D
 
 ```
 
-# 12. Requisitos do sistema
+# 13. Requisitos do sistema
 
 ```
 1. Servidores
@@ -592,7 +593,7 @@ Licença de Banco de Dados: MySQL Community (gratuito) ou PostgreSQL, com planos
 
 ```
 
-# 13. Considerações sobre segurança
+# 14. Considerações sobre segurança
 
 ```
  - Autenticação e Controle de Acesso
@@ -663,7 +664,7 @@ Testes de Penetração (Pentest): Realizar testes de penetração anualmente ou 
 Testes de Intrusão Internos: Simular ataques internos para avaliar a resistência do sistema a funcionários mal-intencionados ou compromissos internos.
 ```
 
-# 14. manutenção e instalação
+# 15. manutenção e instalação
 
 ```
  - Suporte Técnico e Atendimento a Incidentes
@@ -687,11 +688,11 @@ Simulações de Desastres: Realizar simulações anuais de recuperação de desa
 Documentação do Processo de Recuperação: Fornecer uma documentação detalhada sobre os procedimentos de recuperação para que o cliente e sua equipe saibam como reagir em caso de falhas críticas.
 ```
 
-# 15. Glossário
+# 16. Glossário
 
-# 16. Script SQL
+# 17. Script SQL
 
-  ## 16.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
+  ## 17.1 crie um scrit sql para MYSQL para gerar as tabelas para as regras de negócio.
 
   ```SQL
   -- Tabela de Clientes
@@ -786,7 +787,7 @@ CREATE TABLE ConsultasAcompanhamento (
 );
 ```
 
-  ## 16.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.
+  ## 17.2 gere em SQL comandos INSERT com dados fictícios para as tabelas.
 
   ```SQL
 -- Inserir dados na tabela Clientes
